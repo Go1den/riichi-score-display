@@ -6,6 +6,10 @@ table {
     width: 600px;
 }
 
+.scoreDisplay {
+    width: 450px;
+}
+
 .bigWidth {
     width: 800px;
 }
