@@ -1,7 +1,25 @@
+body {
+    font-family: Arial, bold; 
+}
+
 table {
     width: 600px;
 }
 
+.bigWidth {
+    width: 800px;
+}
+
 td {
     height: 30px;
+    font-size: 24px;
+    padding: 5px;
+}
+
+select, button, input {
+    font-size: 24px;
+}
+
+.right {
+    text-align: right;
 }

@@ -26,7 +26,6 @@ function nextDealer() {
     let roundArray = elem.innerHTML.split(" ");
     if (Number(roundArray[1]) < 4) {
         let result = roundArray[0] + ' ' + (Number(roundArray[1]) + 1);
-        console.log(result)
         elem.innerHTML = result;
     } else {
         elem.innerHTML = getNextWind(roundArray[0]) + ' 1';
@@ -38,14 +37,11 @@ function nextDealer() {
 function updateDealerInd() {
     let elem = document.getElementById("round");
     let roundArray = elem.innerHTML.split(" ");
-
     let dealerElems = document.getElementsByClassName("dealerInd");
-    console.log(dealerElems.length);
     for (let i=0; i < dealerElems.length; i++) {
-        console.log('clear it up');
         dealerElems[i].innerHTML = '';
     }
-    document.getElementById(roundArray[1] + 'Dealer').innerHTML = 'YES';
+    document.getElementById(roundArray[1] + 'Dealer').innerHTML = 'DEALER';
 }
 
 function getNextWind(currentWind) {
@@ -64,10 +60,15 @@ function updateField() {
     let data = document.getElementById("data");
     let selectField = document.getElementById("selectField").value;
     let selectPlayer = document.getElementById("selectPlayer").value;
-    console.log(data.value);
-    console.log(selectField);
-    console.log(selectPlayer);
     let updateField = document.getElementById(selectPlayer + selectField);
     updateField.innerHTML = data.value;
     data.value = '';
+}
+
+function greenScreen() {
+    if (document.body.style.backgroundColor == 'rgb(0, 255, 0)') {
+        document.body.style.backgroundColor = '#ffffff';
+    } else {
+        document.body.style.backgroundColor = '#00ff00';
+    }
 }
