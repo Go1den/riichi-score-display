@@ -4,10 +4,15 @@ body {
 
 table {
     width: 600px;
+    background: #676767;
 }
 
 .scoreDisplay {
     width: 450px;
+}
+
+.smallWidth {
+    width: 250px;
 }
 
 .bigWidth {
@@ -15,9 +20,22 @@ table {
 }
 
 td {
-    height: 30px;
-    font-size: 24px;
+    height: 52px;
+    font-size: 36px;
     padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.nametag {
+    font-size: 28px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    text-shadow: none;
+    border: 1px solid;
+    text-align: center;
+    background: #fff;
 }
 
 select, button, input {
@@ -26,4 +44,16 @@ select, button, input {
 
 .right {
     text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.roundtable {
+    background: #aa3333;
+}
+
+.dealerInd {
+    color: yellow;
 }

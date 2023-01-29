@@ -7,6 +7,16 @@ function repeat() {
     }
 }
 
+function newGame() {
+    document.getElementById("repeat").innerHTML = '';
+    document.getElementById("round").innerHTML = 'East 1';
+    document.getElementById("1Score").innerHTML = '25000';
+    document.getElementById("2Score").innerHTML = '25000';
+    document.getElementById("3Score").innerHTML = '25000';
+    document.getElementById("4Score").innerHTML = '25000';
+    updateDealerInd();
+}
+
 function reset() {
     document.getElementById("repeat").innerHTML = '';
     document.getElementById("round").innerHTML = 'East 1';
@@ -18,6 +28,10 @@ function reset() {
     document.getElementById("2Score").innerHTML = '25000';
     document.getElementById("3Score").innerHTML = '25000';
     document.getElementById("4Score").innerHTML = '25000';
+    document.getElementById("1Nametag").innerHTML = 'East';
+    document.getElementById("2Nametag").innerHTML = 'South';
+    document.getElementById("3Nametag").innerHTML = 'West';
+    document.getElementById("4Nametag").innerHTML = 'North';
     updateDealerInd();
 }
 
@@ -62,6 +76,10 @@ function updateField() {
     let selectPlayer = document.getElementById("selectPlayer").value;
     let updateField = document.getElementById(selectPlayer + selectField);
     updateField.innerHTML = data.value;
+    if (selectField === 'Name') {
+        let nextUpdateField = document.getElementById(selectPlayer + selectField + "tag");
+        nextUpdateField.innerHTML = data.value;
+    }
     data.value = '';
 }
 

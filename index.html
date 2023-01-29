@@ -3,61 +3,66 @@
         <link rel="stylesheet" href="mahjong.css">
     </head>
     <body>
-        <table class="scoreDisplay">
+        <table class="bigWidth">
             <tr>
-                <td style="width: 10%;">Player</td>
-                <td style="width: 15%;">Score</td>
-                <td style="width: 55%;">Name</td>
+                <td style="width: 5%;">#</td>
+                <td style="width: 25%;">Score</td>
+                <td style="width: 30%;">Name</td>
                 <td style="width: 20%;"></td>
+                <td class="nametag" style="width: 20%;">Nametag</td>
             </tr>
-            <tr>
+            <tr class="p1">
                 <td class="right">1</td>
-                <td id="1Score">25000</td>
+                <td class="right" id="1Score">25000</td>
                 <td id="1Name">East</td>
                 <td class="dealerInd" id="1Dealer">DEALER</td>
+                <td class="nametag" id="1Nametag">East</td>
             </tr>
-            <tr>
+            <tr class="p2">
                 <td class="right">2</td>
-                <td id="2Score">25000</td>
+                <td class="right" id="2Score">25000</td>
                 <td id="2Name">South</td>
                 <td class="dealerInd" id="2Dealer"></td>
+                <td class="nametag" id="2Nametag">South</td>
             </tr>
-            <tr>
-                <td class="right">3</td>
-                <td id="3Score">25000</td>
+            <tr class="p3">
+                <td class="right p3">3</td>
+                <td class="right" id="3Score">25000</td>
                 <td id="3Name">West</td>
                 <td class="dealerInd" id="3Dealer"></td>
+                <td class="nametag" id="3Nametag">West</td>
             </tr>
-            <tr>
+            <tr class="p4">
                 <td class="right">4</td>
-                <td id="4Score">25000</td>
+                <td class="right" id="4Score">25000</td>
                 <td id="4Name">North</td>
                 <td class="dealerInd" id="4Dealer"></td>
+                <td class="nametag" id="4Nametag">North</td>
             </tr>
         </table>
         <br>
         <br>
-        <table>
+        <table class="bigWidth roundtable">
             <tr>
                 <td>Round</td>
             </tr>
             <tr>
-                <td id="round">East 1</td>
-            </tr>
-            <tr>
-                <td id="repeat"></td>
+                <td>&nbsp;<span id="round">East 1</span>&nbsp;<span id="repeat"></span></td>
             </tr>
         </table>
         <br>
-        <table>
+        <br>
+        <table class="bigWidth">
             <tr>
                 <td><button onclick="repeat()">Repeat</button></td>
                 <td><button onclick="nextDealer()">Next Dealer</button></td>
                 <td><button onclick="greenScreen()">Green Screen</button></td>
+                <td><button onclick="newGame()">New Game</button></td>
                 <td><button onclick="reset()">Reset</button></td>
             </tr>
         </table>
         <br>
+        <p><strong>Edit Names and Scores</strong></p>
         <table class="bigWidth">
             <tr>
                 <td><label for="selectPlayer">Player:</label>
@@ -68,7 +73,7 @@
                       <option value="4">4</option>
                     </select>
                 </td>
-                <td><label for="selectField">Edit Field:</label>
+                <td><label for="selectField">Field:</label>
                     <select name="selectField" id="selectField">
                       <option value="Name">Name</option>
                       <option value="Score">Score</option>
@@ -78,7 +83,7 @@
                     <label for="data">New Value:</label>
                     <input type="text" id="data" name="data"/>
                 </td>
-                <td><button onclick="updateField()">Update</button></td>
+                <td><label>Ready?</label><button onclick="updateField()">Update</button></td>
             </tr>
         </table>
     </body>
