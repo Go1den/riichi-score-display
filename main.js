@@ -7,6 +7,11 @@ function repeat() {
     }
 }
 
+function endGame() {
+    document.getElementById("repeat").innerHTML = '';
+    document.getElementById("round").innerHTML = 'Final';
+}
+
 function newGame() {
     document.getElementById("repeat").innerHTML = '';
     document.getElementById("round").innerHTML = 'East 1';
