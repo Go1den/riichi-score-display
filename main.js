@@ -1,3 +1,9 @@
+document.onkeydown = function (e) {
+    if (e.code === 'F5') {
+      return false;
+    }
+};
+
 function repeat() {
     let elem = document.getElementById("repeat");
     if (elem.innerHTML.length < 1) {
