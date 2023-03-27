@@ -65,28 +65,32 @@
             </tr>
         </table>
         <br>
-        <p><strong>Edit Names and Scores</strong></p>
         <table class="bigWidth">
+            <th>#</th>
+            <th>Name</th>
+            <th>Score</th>
             <tr>
-                <td><label for="selectPlayer">Player:</label>
-                    <select name="selectPlayer" id="selectPlayer">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </td>
-                <td><label for="selectField">Field:</label>
-                    <select name="selectField" id="selectField">
-                      <option value="Name">Name</option>
-                      <option value="Score">Score</option>
-                    </select>
-                </td>
-                <td>
-                    <label for="data">New Value:</label>
-                    <input type="text" id="data" name="data"/>
-                </td>
-                <td><label>Ready?</label><button onclick="updateField()">Update</button></td>
+                <td>1</td>
+                <td><input type="text" id="inputP1Name" name="inputP1Name" value="East"/></td>
+                <td><input type="text" id="inputP1Score" name="inputP1Score" value="25000"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" id="inputP2Name" name="inputP2Name" value="South"/></td>
+                <td><input type="text" id="inputP2Score" name="inputP2Score" value="25000"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" id="inputP3Name" name="inputP3Name" value="West"/></td>
+                <td><input type="text" id="inputP3Score" name="inputP3Score" value="25000"/></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" id="inputP4Name" name="inputP4Name" value="North"/></td>
+                <td><input type="text" id="inputP4Score" name="inputP4Score" value="25000"/></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button onclick="updateFields()">Update</button></td>
             </tr>
         </table>
     </body>

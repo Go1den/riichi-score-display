@@ -27,6 +27,14 @@ td {
     font-weight: bold;
 }
 
+th {
+    font-size: 24px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
 .nametag {
     font-size: 28px;
     padding: 5px;
